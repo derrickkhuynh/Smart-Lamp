@@ -11,4 +11,4 @@ There are 2 different version of the code:
 Display_TouchSensor.cpp is still a work in progress and the text locations, colors, etc. are still being edited
 You are free to change the display as you like.
 
-Coded in PlatformIO IDE using arduino framework.
+Coded in PlatformIO IDE using arduino framework, but probably can copy and paste into .ino file and work perfectly fine as long as Arduino IDE is configured properly
