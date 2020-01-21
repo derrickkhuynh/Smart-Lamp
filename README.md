@@ -4,10 +4,9 @@ Includes display option that displays time, weather and custom message.
 
 Utilizes an ESP32 MCU, a neopixel ring, TFT Display, and a capactive sensor of your choice.
 
-There are 3 different version of the code:
-1. NoDisplay_TouchSensor.cpp  -> only lamp portion, includes a sparkfun capacitive touch sensor.
-2. NoDisplay_TouchLibrary.cpp -> only lamp portion, uses the CapacitiveSensor library.
-3. Display_TouchSensor.cpp    -> lamp +TFT display, includes a sparkfun capacitive touch sensor.
+There are 2 different version of the code:
+1. NoDisplay.cpp -> only lamp portion
+2. Display.cpp   -> lamp +TFT display
 
 Display_TouchSensor.cpp is still a work in progress and the text locations, colors, etc. are still being edited
 You are free to change the display as you like.
