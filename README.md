@@ -10,4 +10,6 @@ There are 4 different version of the code:
 3. Display_TouchSensor.cpp    -> lamp +TFT display, includes a sparkfun capacitive touch sensor.
 4. Display_TouchLibrary.cpp   -> lamp +TFT display, uses the CapacitiveSensor library.
 
+The Display_... files are still a work in progress and the text locations, colors, etc. are still being edited.
+
 Coded in PlatformIO IDE using arduino framework.
