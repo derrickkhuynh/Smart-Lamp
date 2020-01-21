@@ -29,17 +29,17 @@ A custom mobile app will probably not be developed :p but who knows
 /*||*/ int GMToffset = -8; //offset from GMT                     /*||*/
 /*||*/                                                           /*||*/
 /*||*/ const String myClientId = "Derrick";                      /*||*/ 
-/*||*/ const String otherClientId = "Teresa";                    /*||*/ 
+/*||*/ const String otherClientId = "";                    /*||*/ 
 /*||*/ const String currentCity = "Los Angeles, US";             /*||*/ 
 /*||*/                                                           /*||*/
-/*||*/ const char* ssid = "UCLA_WEB";                            /*||*/ 
+/*||*/ const char* ssid = "";                            /*||*/ 
 /*||*/ const char* password = "";                                /*||*/
-/*||*/ const char* mqttServer = "tailor.cloudmqtt.com";          /*||*/ 
-/*||*/ const int mqttPort = 12370;                               /*||*/ 
-/*||*/ const char* mqttUser = "katjvuka";                        /*||*/ 
-/*||*/ const char* mqttPassword = "OHqW_g6W5XcX";                /*||*/ 
+/*||*/ const char* mqttServer = "";          /*||*/ 
+/*||*/ const int mqttPort = 0;                               /*||*/ 
+/*||*/ const char* mqttUser = "";                        /*||*/ 
+/*||*/ const char* mqttPassword = "";                /*||*/ 
 /*||*/                                                           /*||*/
-/*||*/ const String APIkey = "419e38fc466d19614e3a9e73b3f715fc"; /*||*/
+/*||*/ const String APIkey = ""; /*||*/
 /*||*/////////////////////////////////////////////////////////////*||*/
 
 //Initalize library objects
