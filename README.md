@@ -5,8 +5,8 @@ Includes display option that displays time, weather and custom message.
 Utilizes an ESP32 MCU, a neopixel ring, TFT Display, and a capactive sensor of your choice.
 
 There are 2 different version of the code:
-1. NoDisplay.cpp -> only lamp portion
-2. Display.cpp   -> lamp +TFT display
+1. noDisplay.cpp -> only lamp portion
+2. display.cpp   -> lamp +TFT display
 
 Display_TouchSensor.cpp is still a work in progress and the text locations, colors, etc. are still being edited
 You are free to change the display as you like.
