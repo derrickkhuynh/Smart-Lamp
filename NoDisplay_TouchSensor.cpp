@@ -3,9 +3,7 @@
 UCLA EE Student 
 Designed from 12/26/2019 to 1/20/2020
 
-NOTES: THIS IS THE NON TFT VERSION. THIS IMPLEMENTS ONLY A ON/OFF FUNCTION OF LAMP, INCLUDING DUAL ON MODE.
-
-This was programmed in PlatformIO IDE running on VS Code. 
+NOTES: THIS IS THE NON TFT VERSION. THIS IMPLEMENTS ONLY A ON/OFF FUNCTION OF LAMP, INCLUDING PAIR MODE.
 
 I am using a SparkFun Capactive Touch sensor, but first designed using the CapacitiveSensor library by Paul Badger and Paul Stoffregen
 Note: the CapactiveSensor library was incompatible with the Arduino IDE for me.
@@ -14,6 +12,8 @@ The on message is sent automatically by the program, but the custom color must b
 MQTT phone app AND MUST BE IN HTML COLOR CODE - any other code (RGB etc.) WILL NOT WORK. 
 
 A custom mobile app will probably not be developed :p but who knows
+
+This was programmed in PlatformIO IDE running on VS Code. 
 */
 
 #include <Arduino.h>
@@ -32,7 +32,7 @@ A custom mobile app will probably not be developed :p but who knows
 /*||*/ const char* ssid = "";                                    /*||*/ 
 /*||*/ const char* password = "";                                /*||*/
 /*||*/ const char* mqttServer = "";                              /*||*/ 
-/*||*/ const int mqttPort = ;                                    /*||*/ 
+/*||*/ const int mqttPort = 0;                                   /*||*/ 
 /*||*/ const char* mqttUser = "";                                /*||*/ 
 /*||*/ const char* mqttPassword = "";                            /*||*/ 
 /*||*/////////////////////////////////////////////////////////////*||*/
