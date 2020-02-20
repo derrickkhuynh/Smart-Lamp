@@ -2,7 +2,6 @@
 UCLA EE Student 
 Designed from 12/26/2019 to ??/??/2020
 
-Note: This is the TFT Display version of the code.
 Features include: On/Off, Pair mode, custom colors, custom message, current time and date, current weather. 
 
 Custom color must be manually done using a MQTT Websocket or MQTT phone app 
@@ -32,10 +31,10 @@ A custom mobile app will probably not be developed :p but who knows
 /*||*/ const String otherClientId = "";                    /*||*/ 
 /*||*/ const String currentCity = "Los Angeles, US";             /*||*/ 
 /*||*/                                                           /*||*/
-/*||*/ const char* ssid = "";                            /*||*/ 
+/*||*/ const char* ssid = "UCLA_WEB";                            /*||*/ 
 /*||*/ const char* password = "";                                /*||*/
 /*||*/ const char* mqttServer = "";          /*||*/ 
-/*||*/ const int mqttPort = 0;                               /*||*/ 
+/*||*/ const int mqttPort = ;                               /*||*/ 
 /*||*/ const char* mqttUser = "";                        /*||*/ 
 /*||*/ const char* mqttPassword = "";                /*||*/ 
 /*||*/                                                           /*||*/
@@ -53,7 +52,7 @@ NTPClient timeClient(ntpUDP); // NTP client
 //custom vars core to the lamp
 bool touch = false; //bool to determine if led is on
 const int smoothness = 2000; //smoothness determines the speed at which colors change or when lamp turns on/off
-
+unsigned long lastUpdated = 0;
 const char* ntpServer = "pool.ntp.org";
 
 //define some commonly used colors
@@ -82,7 +81,7 @@ unsigned long lastUpdatedWeather = 0;
 
 //store last message recevied
 String oldMsg = "Have a nice day!";
-String currentMsg = "";
+String currentMsg = "I love you <3";
 
 //function begins wifi connection
 void setup_wifi() {
@@ -169,6 +168,10 @@ void updateTimeAndDate() {
     hourStamp -= 12;
     PM = true;
   }
+  else if(hourStamp == 0) {
+    hourStamp = 12;
+    PM = false;
+  }
   else {
     PM = false;
   }
@@ -209,7 +212,7 @@ void getWeather() {
   http.end(); //Free the resources
 }
 
-//helper function to draw a string, as library provided function does not work
+//internal helper function to draw a string, as library provided function does not work
 void drawString(int* xpos, int* ypos, String input, uint8_t font) {
   for(int i = 0; i < input.length(); i++)
   {
@@ -219,7 +222,7 @@ void drawString(int* xpos, int* ypos, String input, uint8_t font) {
 
 //function outputs to the display, the Fonts are customizable to change the display
 //note the display I am using is a 320x240 pixel board.
-void drawTimeandWeather() {
+void drawDisplay() {
   const uint8_t timeFont = 6;
   const uint8_t cityFont = 4;
   const uint8_t forecastFont = 4;
@@ -331,6 +334,7 @@ void setup() {
 
   //when first turned on, turn on lamp to blueGray default
   setColor(blueGray);
+  lastUpdated = millis();
   lastUpdatedTime = millis();
   lastUpdatedWeather = millis();
 }
@@ -341,7 +345,11 @@ void loop() {
   {
     updateTimeAndDate();
     lastUpdatedTime = millis();
+  }
+  if(millis() - lastUpdated > 10*1000)
+  {
     client.publish((myClientId+"/on").c_str(), "Y");
+    lastUpdated = millis();
   }
   //update the weather every 30 minutes
   if(millis() - lastUpdatedWeather > 30*60*1000) 
@@ -349,7 +357,7 @@ void loop() {
     getWeather();
     lastUpdatedWeather = millis();
   }
-  drawTimeandWeather();
+  drawDisplay();
 
   //if the touch sensor is activated, alternate 
   if (digitalRead(touchPin)){
