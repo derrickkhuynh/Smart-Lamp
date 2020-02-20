@@ -8,13 +8,13 @@ There are 2 different version of the code:
 1. noDisplay.cpp -> only lamp portion
 2. display.cpp   -> lamp +TFT display
 
-# Features:
+## Features:
 Simple touch on/off, unlimited color customization, provides current time, date and weather, customized message sending.
 
-# Bill of Materials
+## Bill of Materials
 https://docs.google.com/spreadsheets/d/1QPAhnyyFz2ygeMsZnL3zneTPxA3fL7MyY0FP0qiF18g/edit?usp=sharing
 
-# Credit to:
+## Credit to:
 reddit user u/ralphkrs and his code for main idea of project at 
 https://www.reddit.com/r/arduino/comments/eftbnd/happy_holidays_kind_of_a_newbie_with_arduino_and/
 https://gist.github.com/rlphkrs/25a04761eda68924b2303f3cd747828e
