@@ -27,17 +27,17 @@ A custom mobile app will probably not be developed :p but who knows
 /*||*/ int GMToffset = -8; //offset from GMT                     /*||*/
 /*||*/                                                           /*||*/
 /*||*/ const String myClientId = "Derrick";                      /*||*/ 
-/*||*/ const String otherClientId = "";                    /*||*/ 
+/*||*/ const String otherClientId = "";                          /*||*/ 
 /*||*/ const String currentCity = "Los Angeles, US";             /*||*/ 
 /*||*/                                                           /*||*/
 /*||*/ const char* ssid = "UCLA_WEB";                            /*||*/ 
 /*||*/ const char* password = "";                                /*||*/
-/*||*/ const char* mqttServer = "";          /*||*/ 
-/*||*/ const int mqttPort = ;                               /*||*/ 
-/*||*/ const char* mqttUser = "";                        /*||*/ 
-/*||*/ const char* mqttPassword = "";                /*||*/ 
+/*||*/ const char* mqttServer = "";                              /*||*/ 
+/*||*/ const int mqttPort = ;                                    /*||*/ 
+/*||*/ const char* mqttUser = "";                                /*||*/ 
+/*||*/ const char* mqttPassword = "";                            /*||*/ 
 /*||*/                                                           /*||*/
-/*||*/ const String APIkey = ""; /*||*/
+/*||*/ const String APIkey = "";                                 /*||*/
 /*||*/////////////////////////////////////////////////////////////*||*/
 
 //Initalize library objects
