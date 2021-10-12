@@ -1,6 +1,5 @@
-/*Wifi Clock Lamp designed by Derrick Huynh
-UCLA EE Student 
-Designed from 12/26/2019 to ??/??/2020
+/*Smart Lamp that can output the current time and weather to a display
+as well as connect to another lamp to send messages
 
 Features include: On/Off, Pair mode, custom colors, custom message, current time and date, current weather. 
 
