@@ -1,4 +1,4 @@
-# Love Lamp
+# IoT Smart Lamp
 Created a pair of smart lamps that connect to the Wifi and has additional features when both lamps are on. 
 Includes display option that displays time, weather and custom message.
 
